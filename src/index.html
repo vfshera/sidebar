@@ -7,7 +7,24 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <header class="bg-white w-full h-16"></header>
+    <header class="bg-white w-full h-16 flex justify-between items-center px-5">
+      <!-- logo -->
+      <a href="#">
+        <img src="/public/images/svelte.png" class="h-8 w-8" alt="" />
+      </a>
+
+      <!-- search form -->
+      <form action="" class="">
+        <input
+          type="text"
+          placeholder="Search Content..."
+          class="border border-gray-300 py-1 px-2 rounded-lg"
+        />
+      </form>
+
+      <!-- nav -->
+      <nav></nav>
+    </header>
     <main class="dashboard fixed top-16 left-0 w-full flex bg-[#3c3c3c] h-full">
       <!-- LEFT SIDEBAR -->
       <aside
