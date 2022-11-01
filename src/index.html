@@ -8,10 +8,16 @@
   </head>
   <body>
     <header class="bg-white w-full h-16 flex justify-between items-center px-5">
-      <!-- logo -->
-      <a href="#">
-        <img src="/public/images/svelte.png" class="h-8 w-8" alt="" />
-      </a>
+      <div class="flex gap-3 items-center">
+        <button class="lg:hidden" onclick="slideMenu()">
+          <img src="/public/images/hamburger.png" class="h-5 w-5" alt="" />
+        </button>
+
+        <!-- logo -->
+        <a href="#">
+          <img src="/public/images/svelte.png" class="h-8 w-8" alt="" />
+        </a>
+      </div>
 
       <!-- search form -->
       <form action="" class="">
@@ -30,14 +36,14 @@
       <aside
         id="leftSidebar"
         data-expanded="true"
-        class="w-72 h-full p-5 pt-8 bg-[#022454] text-white relative"
+        class="w-72 h-full p-5 pt-8 bg-[#022454] text-white -translate-x-[100%] transition-transform duration-200 absolute lg:relative"
       >
         <!-- collapse nav btn -->
 
         <img
           onclick="toggleNav(this)"
           src="/public/images/control.png"
-          class="absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple border-2 rounded-full"
+          class="absolute cursor-pointer hidden lg:block -right-3 top-9 w-7 border-dark-purple border-2 rounded-full"
         />
 
         <!-- nav header -->
@@ -115,7 +121,7 @@
         </nav>
       </aside>
       <!-- CENTER -->
-      <main class="flex-1">
+      <main class="flex-1 h-full">
         <!-- content -->
         <div
           class="bg-white w-2/3 py-4 mt-5 ml-5 px-5 flex justify-between items-center rounded-tr-xl rounded-tl-xl"

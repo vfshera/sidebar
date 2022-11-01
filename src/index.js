@@ -23,3 +23,7 @@ function toggleNav(toggleBtn) {
   // hide title
   menuTitles.forEach((title) => title.classList.toggle("hidden"));
 }
+
+function slideMenu() {
+  leftSidebar?.classList.toggle("-translate-x-[100%]");
+}
